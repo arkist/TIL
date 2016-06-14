@@ -13,16 +13,24 @@ Today I learned ¯\_(ツ)_/¯
     * [Jenkins - use of H(hash syntax) in crontab 관련 글](https://issues.jenkins-ci.org/browse/JENKINS-17311) 
     * http://zetawiki.com/wiki/%EB%A6%AC%EB%88%85%EC%8A%A4_%EB%B0%98%EB%B3%B5_%EC%98%88%EC%95%BD%EC%9E%91%EC%97%85_cron,_crond,_crontab
 
-
 ## AngularJS
 
 * 그냥 스타일가이드를 따르자
     * https://github.com/johnpapa/angular-styleguide
 * config 에는 constants와 provider만 inject 가능
 * AngularJS는 템플릿주석을 따로 지원하지 않는다. 별도 디렉티브를 만들던지 해야함. WTF
+* Angular1에서는 es6 이전의 구린 js 문법을 보완하기 위해 몇가지 유틸이 존재한다. 
+    * angular.copy
+    * angular.forEach 등
+    * https://docs.angularjs.org/api/ng/function
+
+## RSQL
+
+* RSQL is a query language for parametrized filtering of entries in RESTful APIs
+* https://github.com/jirutka/rsql-parser#grammar-and-semantic
+* like matching에는 `*`을 쓰면 됨. ex) '바나나'로 시작-> `*바나나`
 
 
 ## Jenkins
 
 * Build status 뱃지를 보여주려면 보안 설정에서 `Allow anonymous read access`를 체크해줘야함
- 
