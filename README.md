@@ -16,4 +16,13 @@ Today I learned ¯\_(ツ)_/¯
 
 ## AngularJS
 
+* 그냥 스타일가이드를 따르자
+    * https://github.com/johnpapa/angular-styleguide
 * config 에는 constants와 provider만 inject 가능
+* AngularJS는 템플릿주석을 따로 지원하지 않는다. 별도 디렉티브를 만들던지 해야함. WTF
+
+
+## Jenkins
+
+* Build status 뱃지를 보여주려면 보안 설정에서 `Allow anonymous read access`를 체크해줘야함
+ 
