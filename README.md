@@ -13,6 +13,12 @@ Today I learned ¯\_(ツ)_/¯
     * [Jenkins - use of H(hash syntax) in crontab 관련 글](https://issues.jenkins-ci.org/browse/JENKINS-17311) 
     * http://zetawiki.com/wiki/%EB%A6%AC%EB%88%85%EC%8A%A4_%EB%B0%98%EB%B3%B5_%EC%98%88%EC%95%BD%EC%9E%91%EC%97%85_cron,_crond,_crontab
 
+## JavaScript
+
+* 매번 까먹지만 boolean과 string, undefined의 타입체크와 변환에 주의하자  
+    * `|`를 이용한 기본값 할당 불가. `this.value = value !== false` 식으로 처리
+    * string|undefined로 넘어오는 값은 아예 `isActive !== 'false'` 이런식으로 처리하는것도 방법
+
 ## AngularJS
 
 * 그냥 스타일가이드를 따르자
@@ -23,6 +29,10 @@ Today I learned ¯\_(ツ)_/¯
     * angular.copy
     * angular.forEach 등
     * https://docs.angularjs.org/api/ng/function
+* `ng-if`와 `ng-show`의 차이는 엘리먼트를 아예 없애느냐 그냥 css로 노출여부만 제어하느냐의 차이
+* `ng-if`는 `else`를 지원하지 않기 때문에 `ng-switch`를 이용하면 좋다
+* `ng-repeat`에서 만든 참조는 해당 엘리먼트에서도 쓸 수 있음
+    * ex) `<li ng-repeat="item in vm.items" class="{{item.className}}">{{item.text}}</li>`
 
 ## RSQL
 
