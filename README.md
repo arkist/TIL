@@ -18,6 +18,10 @@ Today I learned ¯\_(ツ)_/¯
 * 매번 까먹지만 boolean과 string, undefined의 타입체크와 변환에 주의하자  
     * `|`를 이용한 기본값 할당 불가. `this.value = value !== false` 식으로 처리
     * string|undefined로 넘어오는 값은 아예 `isActive !== 'false'` 이런식으로 처리하는것도 방법
+* 배열의 아이템 삭제시 [].forEach 내부에서 [].splice를 쓰면 안된다.
+    * [].filter를 쓸 것
+    * Object[]일 경우 [].forEach(item => {delete item['whatever']})
+    * https://gist.github.com/chad3814/2924672 
 
 ## AngularJS
 
@@ -44,3 +48,13 @@ Today I learned ¯\_(ツ)_/¯
 ## Jenkins
 
 * Build status 뱃지를 보여주려면 보안 설정에서 `Allow anonymous read access`를 체크해줘야함
+
+## REST API
+
+* cors 설정에서 클라이언트에서 받을 수 있는 헤더를 설정해 줄 수 있다. 네트워크탭에서 확인가능한 모든 정보를 기본적으로 제어할 수 있는건 아님
+
+# Git
+
+* 커밋의 날짜를 수정하고 싶으면 `--date` 옵션을 사용
+    * 지금 시간으로 변경하고 싶다면 `git commit --amend --date="now"`
+    * 또다른 방법으로는 `git commit --amend --reset-author --no-edit`
