@@ -37,6 +37,8 @@ Today I learned ¯\_(ツ)_/¯
 * `ng-if`는 `else`를 지원하지 않기 때문에 `ng-switch`를 이용하면 좋다
 * `ng-repeat`에서 만든 참조는 해당 엘리먼트에서도 쓸 수 있음
     * ex) `<li ng-repeat="item in vm.items" class="{{item.className}}">{{item.text}}</li>`
+* 반환하는 객체에 `$promise`가 있는 녀석들은 promise-like 하게 사용할 수 있다
+    * ex) `getData().$promise.then(setProp1).then(setProp2UsingProp1);`   
 
 ## RSQL
 
