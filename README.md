@@ -13,6 +13,7 @@ Today I learned ¯\_(ツ)_/¯
     * [Jenkins - use of H(hash syntax) in crontab 관련 글](https://issues.jenkins-ci.org/browse/JENKINS-17311) 
     * http://zetawiki.com/wiki/%EB%A6%AC%EB%88%85%EC%8A%A4_%EB%B0%98%EB%B3%B5_%EC%98%88%EC%95%BD%EC%9E%91%EC%97%85_cron,_crond,_crontab
 
+
 ## JavaScript
 
 * 매번 까먹지만 boolean과 string, undefined의 타입체크와 변환에 주의하자  
@@ -22,6 +23,7 @@ Today I learned ¯\_(ツ)_/¯
     * [].filter를 쓸 것
     * Object[]일 경우 [].forEach(item => {delete item['whatever']})
     * https://gist.github.com/chad3814/2924672 
+
 
 ## AngularJS
 
@@ -39,6 +41,12 @@ Today I learned ¯\_(ツ)_/¯
     * ex) `<li ng-repeat="item in vm.items" class="{{item.className}}">{{item.text}}</li>`
 * 반환하는 객체에 `$promise`가 있는 녀석들은 promise-like 하게 사용할 수 있다
     * ex) `getData().$promise.then(setProp1).then(setProp2UsingProp1);`   
+* ui-router: 의존관계(parent-child)를 엮는건 주의해야 한다. state 변환시 params가 꼬일 수 있음
+    * parent로부터 params을 상속받을 수 있지만 대부분의 경우 의존관계를 제거하고 명시적으로 params를 제어하는게 훨씬 낫다
+    * 편집페이지 같은곳만 parent 고려해주고 나머진 root로 지정해 주면 좋을 듯
+* ui-router: url을 처리할 때 `/`를 엄격하게 다룬다
+    * optional하게 처리하고 싶다면 https://github.com/angular-ui/ui-router/wiki/Frequently-Asked-Questions#how-to-make-a-trailing-slash-optional-for-all-routes   
+
 
 ## RSQL
 
@@ -51,9 +59,11 @@ Today I learned ¯\_(ツ)_/¯
 
 * Build status 뱃지를 보여주려면 보안 설정에서 `Allow anonymous read access`를 체크해줘야함
 
+
 ## REST API
 
 * cors 설정에서 클라이언트에서 받을 수 있는 헤더를 설정해 줄 수 있다. 네트워크탭에서 확인가능한 모든 정보를 기본적으로 제어할 수 있는건 아님
+
 
 # Git
 
