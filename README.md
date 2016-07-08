@@ -1,5 +1,5 @@
 # TIL
-Today I learned ¯\_(ツ)_/¯
+Today I learned `¯\_(ツ)_/¯`
 
 
 ## Unix Command
@@ -25,6 +25,16 @@ Today I learned ¯\_(ツ)_/¯
     * https://gist.github.com/chad3814/2924672 
 
 
+## ReactJS
+
+* 컴포넌트 초기화 코드는 constructor 말고 componentDidMount에서 처리하자
+    * 예를 들면 서버렌더링을 할 경우 초기화코드에서 window 객체를 참고하면 말없이 죽어버린다. 
+    마운트 이후엔 참조 가능  
+* 서버렌더링 코드를 구성할 때는 앱코드블럭(`<script src="app.js"></script>`)보다 
+상태(`<script>window.__STATE__={/* state */}</script>`)를 먼저 선언해야 함을 잊지말자. 
+위와 비슷하게 참조시점에 객체가 존재하지않아 문제 
+
+
 ## AngularJS
 
 * 그냥 스타일가이드를 따르자
@@ -47,6 +57,12 @@ Today I learned ¯\_(ツ)_/¯
 * ui-router: url을 처리할 때 `/`를 엄격하게 다룬다
     * optional하게 처리하고 싶다면 https://github.com/angular-ui/ui-router/wiki/Frequently-Asked-Questions#how-to-make-a-trailing-slash-optional-for-all-routes   
 
+
+## CSS
+
+* flexbox를 공부하자. 꽉 채운 레이아웃을 구성하기에 효과적. 그러니까, '앱'스런 레이아웃.
+    * https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+    * https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties
 
 ## RSQL
 
