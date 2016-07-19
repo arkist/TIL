@@ -23,6 +23,8 @@ Today I learned `¯\_(ツ)_/¯`
     * [].filter를 쓸 것
     * Object[]일 경우 [].forEach(item => {delete item['whatever']})
     * https://gist.github.com/chad3814/2924672 
+* 서버단에서 Object를 다룰때는 특히 주의하자. 개별 요청에서 전역에 참조되는 Object(어플리케이션 상태 등)를 변경하게 되면 모든 사용자에게 영향을 미친다. 
+객체를 바로 참조하지 말고 항상 복사한 뒤 개별 컨텍스트 내에서 다루도록 하자.      
 
 
 ## ReactJS
@@ -86,3 +88,10 @@ Today I learned `¯\_(ツ)_/¯`
 * 커밋의 날짜를 수정하고 싶으면 `--date` 옵션을 사용
     * 지금 시간으로 변경하고 싶다면 `git commit --amend --date="now"`
     * 또다른 방법으로는 `git commit --amend --reset-author --no-edit`
+
+
+# Mail DM
+
+* Daum 메일은 table 연관 태그들이 폰트관련 속성을 상속받지 못한다
+* 아웃룩은 지옥이다. 기본적으로 이미지를 안보여주고 margin, padding 따위를 가볍게 무시하는 듯
+* 의외로 font-family 셋팅이 먹는다
